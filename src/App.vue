@@ -38,12 +38,12 @@
       
         <div v-if="employees && employees.length">
       <div v-for="(employee, index)  in employees" v-bind:key='"employee" + index' :employee='employee'>
-        <div class="employeeContainer">
+        <div class="staffContainer">
           <b-container class="staffSection">
             <b-row text-variant="white" class="employee">
               
               <b-col><h1 class="name">{{employee.name}}</h1>
-              <img class="photo" src="#" height="250px" width="250px"></b-col>
+              <img class="photo" v-bind:src="employee.image" height="250px" width="250px"></b-col>
 
               <b-col><h2 class="Title">{{employee.title}}</h2>
               <h2 class="descBox">{{employee.desc}}</h2></b-col>
@@ -66,7 +66,7 @@
           <div>
             <b-button v-b-toggle.collapse1 class="service">Preventative Care</b-button>
             <b-collapse id="collapse1" class="mt-2">
-              <b-card>
+              <b-card class="section">
                 <h2>Vaccinations</h2>
                 <p class="card-text">Vaccines are an excellent way to keep our pets protected from infectious disease
                   before they strike. Vaccinations can help prevent/prepare our pets for common diseases. By protecting
@@ -106,14 +106,14 @@
                   of an Heartworm Prevention products. Our preferred brands are listed below and typically consist of
                   oral paste, pilsl, or chewables. Pesky fleas and ticks can also be avoided using a topical
                   application. Being proactive is key to to avoiding the dangers of parasites.</p>
-                <b-button v-b-toggle.collapse2_inner size="sm">See More</b-button>
-                <b-collapse id=collapse2_inner class="mt-2">
+                <b-button v-b-toggle.collapse3_inner size="sm">See More</b-button>
+                <b-collapse id=collapse3_inner class="mt-2">
                   <b-card>Contact us to get your pet on parasite prevention today! 720-870-8387
-                    <b-container class="supplyers">
+                    <b-container>
                       <b-col>
-                        <b-row><img class="supplyer" src="./assets/HeartgardPlus.png" height="50px" width="150px"></b-row>
-                        <b-row><img class="supplyer" src="./assets/InterceptorPlus.png" height="100px" width="150px"></b-row>
-                        <b-row><img class="supplyer" src="./assets/ParaStar.png" height="50px" width="150px"></b-row>
+                        <b-row class="supplyers"><img class="supplyer" src="./assets/HeartgardPlus.png" height="50px" width="150px">
+                        <img class="supplyer" src="./assets/InterceptorPlus.png" height="100px" width="150px">
+                        <img class="supplyer" src="./assets/ParaStar.png" height="50px" width="150px"></b-row>
                       </b-col>
                     </b-container>
 
@@ -165,8 +165,7 @@
                   surgeries.
 
                   We also engage Dr. Stubbs of Mile High Veterinary Surgical Specialists. He is an amazing surgeon,
-                  specializing in TPLO and Excap procedures. Check out his website by clicking</p>
-                <b-button href="http://milehighveterinarysurgicalspecialists.com/index.html">HERE.</b-button>
+                  specializing in TPLO and Excap procedures. Check out his website by clicking <a href="http://milehighveterinarysurgicalspecialists.com/index.html">HERE</a>.</p>
                 <b-button v-b-toggle.collapse3_inner size="sm">See More</b-button>
                 <b-collapse id=collapse3_inner class="mt-2">
                   <b-card>If you have any more questions or need a quote on our surgical procedures, please call us at
@@ -184,8 +183,11 @@
             <b-button v-b-toggle.collapse4 class="service">Dental Care</b-button>
             <b-collapse id="collapse4" class="mt-2">
               <b-card>
+                <b-row>
+                  <b-col><img src="./assets/DentalCare.png" height="450px" width="350px"></b-col>
+                <b-col class="dentalcare">
                 <h2>Dental Care</h2>
-                <img class="dentalcare" src="./assets/DentalCare.png">
+                
                 <p class="card-text">
                   Dental hygiene is just as important to our pet’s health as it is to our own. Dental disease can lead
                   to more serious issues, such as pain in the mouth, heart disease, and kidney disease. Sometimes bad
@@ -197,11 +199,13 @@
                   We hope to catch periodontal disease early, before it becomes an issue. Although regular brushing at
                   home can help keep tartar and gingivitis in check, sometimes a more extensive cleaning is necessary
                   to ensure a healthy mouth and healthy life for your pet.</p>
-                <b-button v-b-toggle.collapse4_inner size="sm">See More</b-button>
+
+                <b-button v-b-toggle.collapse4_inner size="sm">See More</b-button></b-col>
                 <b-collapse id=collapse4_inner class="mt-2">
-                  <b-card>Give us a call to schedule an appointment for a dental cleaning or to examine the health of
+                  <b-card class="extraBox">Give us a call to schedule an appointment for a dental cleaning or to examine the health of
                     your pet’s teeth. 720-870-8387</b-card>
                 </b-collapse>
+                </b-row>
               </b-card>
             </b-collapse>
           </div>
@@ -327,15 +331,15 @@
         <b-col class="link">
           <h1 class="linkTitle">The American Society for the Prevention of Cruelty to Animals</h1>
           <img class="aspcaPhoto" src="./assets/ASPCA.png">
-          <h3>The first humane organization to be granted legal authority to investigate and make arrests for crimes
+          <h3 class="aspcaDesc">The first humane organization to be granted legal authority to investigate and make arrests for crimes
             against animals.</h3>
           <b-button href="https://www.aspca.org/">Visit Site</b-button>
         </b-col>
         <b-col class="link">
           <h1 class="linkTitle">Animal Emergency & Specialty Center</h1>
           <img class="aescPhoto" src="./assets/AnimalEmergencyCenter.png">
-          <h3>For after hours emergencies, please contact AESC at 720-842-5050.</h3>
-          <h3>Located at 17701 Cottonwood Drive in Parker.</h3>
+          <h3 class="aescDesc">For after hours emergencies, please contact AESC at 720-842-5050.</h3>
+          <h3 class="aescDesc">Located at 17701 Cottonwood Drive in Parker.</h3>
           <b-button href="http://aescparker.com/wp-content/">Visit Site</b-button>
         </b-col>
       </b-row>
@@ -343,16 +347,14 @@
         <b-col class="link">
           <h1 class="linkTitle">American Veterinary Medical Association</h1>
           <img class="avmaPhoto" src="./assets/AVMA-Logo.png">
-          <b-col>
+          <br>
             <b-button href="https://www.avma.org/Pages/home.aspx">Visit Site</b-button>
-          </b-col>
         </b-col>
         <b-col class="link">
           <h1 class="linkTitle">Mile HighVeterinary Surgical Specialists</h1>
           <img class="mhssPhoto" src="./assets/mhss.png">
-          <b-col>
+          <br>
             <b-button href="http://milehighveterinarysurgicalspecialists.com/bio.html">Visit Site</b-button>
-          </b-col>
         </b-col>
       </b-row>
     </b-container>
@@ -697,11 +699,12 @@ margin-top: 5px;
 }
 .employee{
   background-color: white;
+  padding-bottom: 10px;
   border: 1px solid black;
   border-radius: 15px;
   height: 100%;
   font-family: 'Lato', sans-serif;
-  margin: 10px;
+  margin: 15px;
 }
 .email{
   font-family: 'Lato', sans-serif;
@@ -718,8 +721,7 @@ margin-top: 5px;
   font-size: 58px;
   color:white;
   text-shadow: 1px 1px black;
-  margin-top: 150px;
-  margin-left: -250px;
+  width: 100%
 }
 .white--text{
   color: black;
@@ -734,6 +736,10 @@ p{
 }
 div.card-body{
   color: black;
+  border: 1px solid black;
+}
+.mt-2{
+  width: 100%;
 }
 
 .name{
@@ -753,7 +759,7 @@ div.card-body{
   right: 30px;
 }
 .descBox{
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 20px;
   color: black;
 }
@@ -826,17 +832,25 @@ div.card-body{
 .service{
   margin: 5px;
 }.dentalcare{
-  height: 250px;
-  width: 250px;
-  display: flex;
+right: 25px;
 }
 .aspcaPhoto{
   height: 75px;
   width: 200px;
 }
+.aescDesc{
+  font-size: 18px;
+}
+.aspcaDesc{
+  font-size: 18px;
+}
 .mhssPhoto{
-height: 250px;
-width: 450px;
+height: 60%;
+width: 75%;
+}
+.avmaPhoto{
+  height: 60%;
+  width: 50%;
 }
 .linksPage{
 background-color: #49A35B;
@@ -856,10 +870,26 @@ color: black;
 .coupon{
   height: 250px;
   width: 350px;
+  border: 1px solid black;
+  margin: 5px;
+  border-radius: 15px;
 }
 .specialsSection{
   background-color: white; 
   border-radius: 15px;
   border: 3px solid black;
 }
+.section{
+  border: 2px solid black;
+}
+.supplyers{
+  display:flex;
+  align-self: center;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+}
+
 </style>

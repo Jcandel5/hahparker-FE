@@ -2,7 +2,7 @@
     <div class="headerContainer">
         <b-container class="header">
       <div class="col-md">
-        <h2>Located at: 22651 E Aurora Parkway Suite A-1</h2>
+        <h2>22651 E Aurora Parkway Suite A-1</h2>
         <h2>Aurora, CO 80016</h2>
         <h2>720-870-8387</h2>
         <br>
@@ -25,8 +25,8 @@ name: "Header"
 
 <style>
 .header{
-  background-color: rgb(100, 99, 99);
-  border: 5px solid lightgray;
+  background-color: white;
+  border: 5px solid black;
   border-radius: 15px;
 }
 p{
@@ -36,6 +36,6 @@ p{
    border-radius: 15px;
 }
 .text{
-  color:white;
+  color:black;
 }
 </style>

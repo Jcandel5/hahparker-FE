@@ -333,14 +333,16 @@
           <img class="aspcaPhoto" src="./assets/ASPCA.png">
           <h3 class="aspcaDesc">The first humane organization to be granted legal authority to investigate and make arrests for crimes
             against animals.</h3>
-          <b-button href="https://www.aspca.org/">Visit Site</b-button>
+            <a href="https://www.aspca.org/" target="_blank">
+          <b-button>Visit Site</b-button></a>
         </b-col>
         <b-col class="link">
           <h1 class="linkTitle">Animal Emergency & Specialty Center</h1>
           <img class="aescPhoto" src="./assets/AnimalEmergencyCenter.png">
           <h3 class="aescDesc">For after hours emergencies, please contact AESC at 720-842-5050.</h3>
           <h3 class="aescDesc">Located at 17701 Cottonwood Drive in Parker.</h3>
-          <b-button href="http://aescparker.com/wp-content/">Visit Site</b-button>
+          <a href="http://aescparker.com/wp-content/" target="_blank">
+          <b-button>Visit Site</b-button></a>
         </b-col>
       </b-row>
       <b-row>
@@ -348,13 +350,15 @@
           <h1 class="linkTitle">American Veterinary Medical Association</h1>
           <img class="avmaPhoto" src="./assets/AVMA-Logo.png">
           <br>
-            <b-button href="https://www.avma.org/Pages/home.aspx">Visit Site</b-button>
+          <a href="https://www.avma.org/Pages/home.aspx" target="_blank">
+            <b-button>Visit Site</b-button></a>
         </b-col>
         <b-col class="link">
           <h1 class="linkTitle">Mile HighVeterinary Surgical Specialists</h1>
           <img class="mhssPhoto" src="./assets/mhss.png">
           <br>
-            <b-button href="http://milehighveterinarysurgicalspecialists.com/bio.html">Visit Site</b-button>
+          <a href="http://milehighveterinarysurgicalspecialists.com/bio.html" target="_blank">
+            <b-button>Visit Site</b-button></a>
         </b-col>
       </b-row>
     </b-container>
@@ -381,7 +385,7 @@
         <b-col>
           <img class="coupon" src="./assets/coupon-3.png">
           <a href="https://s3.us-east-2.amazonaws.com/coupon-firstexam/coupon-3.png" target="_blank">
-          <b-button >Print</b-button>
+          <b-button>Print</b-button>
           </a>
         </b-col>
         <br>

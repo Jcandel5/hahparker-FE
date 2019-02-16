@@ -10,8 +10,8 @@
           technology and provide the best treatment for your pet. Whether on two legs or four, everyone is treated like
           family.</p>
         <br>
-        <p class="text">You’ll see a list of our services in the menu to the right. Feel free to browse around and ask any questions
-          by clicking here to Contact Us. We look forward to offering unparalleled service and medical care.</p>
+        <p class="text">You’ll see a list of our services in the menu above. Feel free to browse around and ask any questions
+          by clicking the Contact Us above. We look forward to offering unparalleled service and medical care.</p>
       </div>
     </b-container>
     </div>

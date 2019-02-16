@@ -231,13 +231,10 @@
                   your pet in a non-invasive, comfortable manner. In some cases, ultrasound is the best method to
                   diagnose an issue.</p>
                 <h2>Laboratory</h2>
-                <p class="card-text">Our advances in human medicine have created technology that is beneficial for our
-                  pets. Like x-rays, Ultrasound’s are one advancement that allows us to further examine a pet’s
-                  condition to diagnose and determine the correct form of action for your pet.
-
-                  Ultrasonography is a diagnostic method that uses ultrasound imaging to safely evaluate the organs of
-                  your pet in a non-invasive, comfortable manner. In some cases, ultrasound is the best method to
-                  diagnose an issue.</p>
+                <p class="card-text">Heritage Animal Hospital maintains a full service laboratory where we can perform everything from basic tests like fecals, heartworm tests, urinalysis and cytology evaluations.
+                  In addition, we can also run more in-depth diagnostics such as CBC, Chemistry profiles, Electrolytes, Thyroid testing and Cortisol levels.
+                  In most cases, we will have the results within 20 - 30 minutes.
+                </p>
 
                 <b-button v-b-toggle.collapse5_inner size="sm">See More</b-button>
                 <b-collapse id=collapse5_inner class="mt-2">
@@ -259,7 +256,7 @@
                 <h2>Grooming</h2>
                 <p class="card-text">
                   Keeping your dog’s body/coat clean/untangled can seem like a monumental task. Our grooming services
-                  are here to help! Ashley is amazing at giving your family member (pet) a positive experience and also
+                  are here to help! Kales is amazing at giving your family member (pet) a positive experience and also
                   shines at addressing their owners specific needs. Keeping your dog clean and groomed can not only
                   help maintain a beautiful coat, but also helps prevent matting and possible health issues.
 
@@ -302,7 +299,7 @@
           </div>
         </b-col>
       </b-row>
-      <b-row>
+      <!-- <b-row>
         <b-col>
           <div>
             <b-button v-b-toggle.collapse8 class="service">Boarding</b-button>
@@ -319,7 +316,7 @@
             </b-collapse>
           </div>
         </b-col>
-      </b-row>
+      </b-row> -->
       <br>
     </b-container>
     <br>

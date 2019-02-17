@@ -11,7 +11,7 @@
           family.</p>
         <br>
         <p class="text">You’ll see a list of our services in the menu above. Feel free to browse around and ask any questions
-          by clicking the Contact Us above. We look forward to offering unparalleled service and medical care.</p>
+          by clicking the Contact Us button above. We look forward to offering unparalleled service and medical care.</p>
       </div>
     </b-container>
     </div>

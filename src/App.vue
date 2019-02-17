@@ -280,6 +280,10 @@
             <b-button v-b-toggle.collapse7 class="service">Pain Management</b-button>
             <b-collapse id="collapse7" class="mt-2">
               <b-card>
+                <b-row>
+                  <b-col><img src="./assets/pain-management.png" height="450px" width="350px"></b-col>
+            <b-col class="painmanagement">
+              <h2>Pain Management</h2>
                 <p class="card-text">At Heritage Animal Hospital, we focus on the whole picture, from medical issues
                   that affect the patient’s physical health, to the psychological issues that affect the quality of
                   life your pet is experiencing. Pain can affect proper function of the body and have a detrimental
@@ -289,11 +293,12 @@
                   Whether routine procedures or medical treatments of chronically painful conditions, we are dedicated
                   to providing safe and effective pain management. We also help you recognize signs of pain in your pet
                   and help establish a pain management plan.</p>
-                <b-button v-b-toggle.collapse7_inner size="sm">See More</b-button>
+                <b-button v-b-toggle.collapse7_inner size="sm">See More</b-button></b-col>
                 <b-collapse id=collapse7_inner class="mt-2">
                   <b-card>Call us if you have concerns over your pet’s behavior that may be associated with discomfort
                     or pain. 720-870-8387</b-card>
                 </b-collapse>
+                </b-row>
               </b-card>
             </b-collapse>
           </div>
@@ -366,7 +371,7 @@
       </center>
       <b-row>
         <b-col>
-          <img class="coupon" src="./assets/coupon.png">
+          <!-- <img class="coupon" src="./assets/coupon.png">
           <a href="https://s3.us-east-2.amazonaws.com/coupon-firstexam/coupon.png" target="_blank">
           <b-button >Print</b-button>
           </a>
@@ -390,7 +395,8 @@
           <img class="coupon" src="./assets/coupon-1.png">
           <a href="https://s3.us-east-2.amazonaws.com/coupon-firstexam/coupon-1.png" target="_blank">
           <b-button>Print</b-button>
-          </a>
+          </a> -->
+        
         </b-col>
       </b-row>
     </b-container>
@@ -411,7 +417,7 @@
       </b-row>
       <br>
       <b-col>
-        <b-button href="https://goo.gl/maps/eXUfAuAYnD72" class="locationButton">
+        <b-button href="https://goo.gl/maps/eXUfAuAYnD72" target="_blank" class="locationButton">
           <h4 class="locationText">22651 E Aurora Parkway, Ste A-1</h4>
         </b-button>
       </b-col>
@@ -471,17 +477,17 @@
             <b-container>
               <b-row>
                 <b-col>
-                  <b-button href="https://twitter.com/heritageah/" class="twitter"><i class="fab fa-twitter fa-3x"></i></b-button>
+                  <b-button href="https://twitter.com/heritageah/" target="_blank" class="twitter"><i class="fab fa-twitter fa-3x"></i></b-button>
                 </b-col>
                 <b-col>
-                  <b-button href="https://www.facebook.com/hahpetvets/" class="facebook"><i class="fab fa-facebook fa-3x"></i></b-button>
+                  <b-button href="https://www.facebook.com/hahpetvets/" target="_blank" class="facebook"><i class="fab fa-facebook fa-3x"></i></b-button>
                 </b-col>
                 <b-col>
-                  <b-button href="https://plus.google.com/111520823811354306725" class="googleplus"><i class="fab fa-google-plus fa-3x"></i></b-button>
+                  <b-button href="https://plus.google.com/111520823811354306725" target="_blank" class="googleplus"><i class="fab fa-google-plus fa-3x"></i></b-button>
                 </b-col>
                 <b-col>
                   <b-button href="https://www.instagram.com/explore/locations/473812699/heritage-animal-hospital/"
-                    class="instagram"><i class="fab fa-instagram fa-3x"></i></b-button>
+                    class="instagram" target="_blank"><i class="fab fa-instagram fa-3x"></i></b-button>
                 </b-col>
               </b-row>
             </b-container>
@@ -523,13 +529,17 @@ export default {
     data() {
     return {
       employees: [],
-      apiURL: "https://hahparker.herokuapp.com/api/employee/"
+      apiURL: "https://hahparker.herokuapp.com/api/employee/",
     };
   },
   mounted() {
     axios.get(this.apiURL).then(response => {
       console.log(response.data);
       this.employees = response.data;
+    });
+    axios.get(this.apiURL).then(response => {
+      console.log(response.data);
+      this.coupons = response.data;
     });
   },
   components: {

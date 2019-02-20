@@ -165,7 +165,7 @@
                   surgeries.
 
                   We also engage Dr. Stubbs of Mile High Veterinary Surgical Specialists. He is an amazing surgeon,
-                  specializing in TPLO and Excap procedures. Check out his website by clicking <a href="http://milehighveterinarysurgicalspecialists.com/index.html">HERE</a>.</p>
+                  specializing in TPLO and Excap procedures. Check out his website by clicking <a target="_blank" href="http://milehighveterinarysurgicalspecialists.com/index.html">HERE</a>.</p>
                 <b-button v-b-toggle.collapse3_inner size="sm">See More</b-button>
                 <b-collapse id=collapse3_inner class="mt-2">
                   <b-card>If you have any more questions or need a quote on our surgical procedures, please call us at

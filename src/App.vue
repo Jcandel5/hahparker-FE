@@ -31,7 +31,7 @@
     <br>
     <Header />
     <br>
-    <b-container ref="staff" class="staffSection">
+    <b-container ref="staff">
       <center>
         <h1 class="headers">Staff</h1>
       </center>
@@ -360,7 +360,7 @@
           <img class="mhssPhoto" src="./assets/mhss.png">
           <br>
           <a href="http://milehighveterinarysurgicalspecialists.com/bio.html" target="_blank">
-            <b-button>Visit Site</b-button></a>
+          <b-button>Visit Site</b-button></a>
         </b-col>
       </b-row>
     </b-container>
@@ -396,7 +396,23 @@
           <a href="https://s3.us-east-2.amazonaws.com/coupon-firstexam/coupon-1.png" target="_blank">
           <b-button>Print</b-button>
           </a> -->
-        
+         <div v-if="coupons && coupons.length">
+      <div v-for="(coupon, index)  in coupons" v-bind:key='"coupon" + index' :coupon='coupon'>
+        <div class="couponContainer">
+          <b-container class="couponSection">
+            <b-row text-variant="white" class="coupon">
+              
+              <b-col>
+                <b-button class="printButton" v-bind:href="coupon.image">Print
+              <img class="photo" v-bind:src="coupon.image" height="250px" width="250px">
+                </b-button>
+             </b-col>
+              
+            </b-row>
+          </b-container>
+        </div>
+      </div>
+    </div>
         </b-col>
       </b-row>
     </b-container>
@@ -429,7 +445,9 @@
       <br>
       <h4><b>Hours</b></h4>
       <center>
+        <b-container class="hoursContainer">
         <b-row class="day">
+          
           <b-col class="time">
             <h5 class="day">Monday</h5>
             8 am - 6 pm
@@ -459,6 +477,7 @@
             Closed
           </b-col>
         </b-row>
+        </b-container>
       </center>
       <br>
     </b-container>
@@ -469,7 +488,7 @@
     <center>
       <v-footer dark height="auto">
 
-        <div class="footer">
+        <!-- <div class="footer">
           <v-card-text>
             <v-card-text class="white--text pt-0">
               Follow Us On
@@ -492,7 +511,7 @@
               </b-row>
             </b-container>
           </v-card-text>
-        </div>
+        </div> -->
 
 
         <v-divider></v-divider>
@@ -529,19 +548,21 @@ export default {
     data() {
     return {
       employees: [],
-      apiURL: "https://hahparker.herokuapp.com/api/employee/",
+      employeeURL: "https://hahparker.herokuapp.com/api/employee/",
+      coupons: [],
+      couponURL: "https://hahparker.herokuapp.com/admin/coupons/client/"
     };
   },
+  
   mounted() {
-    axios.get(this.apiURL).then(response => {
-      console.log(response.data);
+    axios.get(this.employeeURL).then(response => {
       this.employees = response.data;
     });
-    axios.get(this.apiURL).then(response => {
-      console.log(response.data);
+    axios.get(this.couponURL).then(response => {
       this.coupons = response.data;
     });
   },
+  
   components: {
    Header
   },
@@ -584,7 +605,7 @@ export default {
 
 <style>
 html{
- background-color: #3E69B1;
+ background-color: #CFA580;
   width: 100%;
 }
 #app {
@@ -595,7 +616,8 @@ html{
   color: white;
   margin-top: 60px;
   width: 100%;
- background-color: #3E69B1;
+ background: linear-gradient(#CFA580, white, #CFA580);
+ /* background-color: #3E69B1; */
  
 }
 .title{
@@ -631,7 +653,7 @@ h5{
   text-shadow: .5px .5px white;
 }
 .button{
-  background-color: #1e1472;
+  background-color: #3E69B1;
   border: 3px solid black;
   text-shadow: 1px 1px black;
   border-radius: 15px;
@@ -672,8 +694,9 @@ h5{
   border: 3px solid black;
   border-radius: 15px;
 }
+
 .headers{
-  background-color: #1e1472;
+  background-color: #3E69B1;
   border-radius: 20px;
   width: 250px;
 margin-top: 5px;
@@ -695,10 +718,13 @@ margin-top: 5px;
   color: white;
   text-shadow: 1px 1px black;
   width: 100%;
-  background-color: #1e1472;
+  background-color: #3E69B1;
 }
 .locationButton{
-  background-color: #1e1472;
+  background-color: #3E69B1;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin-bottom: 15px;
 }
 .locationImage{
   width: 55%;
@@ -777,69 +803,6 @@ div.card-body{
 .decBox{
   right: 20px;
 }
-.sherridescBox{
-  font-size: 15px;
-}
-.emilydescBox{
-  font-size: 12px;
-}
-.sherri{
-  height: 300px;
-  width: 300px;
-  margin-top: 15px;
-}
-.marvin{
-  height: 300px;
-  width: 300px;
-  margin-top: 15px;
-}
-.mandy{
-  height: 300px;
-  width: 300px;
-  margin-top: 15px;
-}
-.sav{
-  height: 300px;
-  width: 300px;
-  margin-top: 15px;
-}
-.tara{
-  height: 300px;
-  width: 300px;
-  margin-top: 15px;
-}
-.kales{
-   height: 300px;
-  width: 300px;
-  margin-top: 15px;
-}
-.alexis{
-   height: 300px;
-  width: 300px;
-  margin-top: 15px;
-}
-.emily{
-   height: 300px;
-  width: 300px;
-  margin-top: 15px;
-}
-
-.twitter{
-  background-color: #3E69B1;
-  border: 0px solid white;
-}
-.facebook{
-  background-color: #3E69B1;
-  border: 0px solid white;
-}
-.googleplus{
-  background-color: #3E69B1;
-  border: 0px solid white;
-}
-.instagram{
-  background-color: #3E69B1;
-  border: 0px solid white;
-}
 .service{
   margin: 5px;
 }.dentalcare{
@@ -856,12 +819,12 @@ right: 25px;
   font-size: 18px;
 }
 .mhssPhoto{
-height: 60%;
-width: 75%;
+height: 150px;
+width: 250px;
 }
 .avmaPhoto{
-  height: 60%;
-  width: 50%;
+  height: 150px;
+  width: 300px;
 }
 .linksPage{
 background-color: #49A35B;
@@ -879,10 +842,14 @@ color: black;
   color: black;
 }
 .coupon{
-  height: 250px;
-  width: 350px;
-  border: 1px solid black;
-  margin: 5px;
+  height: 50%;
+  width: 50%;
+  border-radius: 15px;
+  display: inline;
+}
+.printButton{
+  background-color: #3E69B1;
+  border: 3px solid black;
   border-radius: 15px;
 }
 .specialsSection{

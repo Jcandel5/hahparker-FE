@@ -11,11 +11,11 @@
     <br>
     <div class="NavBar" v-b-scrollspy:nav-scroller>
       <b-container class="NavBarButtons">
-        <button id="staff" @click="staff('staff')" class="button">
-          Staff
-        </button>
         <button id="services" @click="services('services')" class="button">
           Services
+        </button>
+        <button id="staff" @click="staff('staff')" class="button">
+          Staff
         </button>
         <button id="specials" @click="specials('specials')" class="button">
           Specials
@@ -31,32 +31,7 @@
     <br>
     <Header />
     <br>
-    <b-container ref="staff">
-      <center>
-        <h1 class="headers">Staff</h1>
-      </center>
-      
-        <div v-if="employees && employees.length">
-      <div v-for="(employee, index)  in employees" v-bind:key='"employee" + index' :employee='employee'>
-        <div class="staffContainer">
-          <b-container class="staffSection">
-            <b-row text-variant="white" class="employee">
-              
-              <b-col><h1 class="name">{{employee.name}}</h1>
-              <img class="photo" v-bind:src="employee.image" height="250px" width="250px"></b-col>
-
-              <b-col><h2 class="Title">{{employee.title}}</h2>
-              <h2 class="descBox">{{employee.desc}}</h2></b-col>
-              
-            </b-row>
-          </b-container>
-        </div>
-      </div>
-    </div>
-      </b-container>
-    <br>
-    <br>
-    <b-container ref="services" class="servicesContainer">
+        <b-container ref="services" class="servicesContainer">
       <br>
       <center>
         <h1 class="headers">Services</h1>
@@ -324,6 +299,31 @@
       </b-row> -->
       <br>
     </b-container>
+    <br>
+    <b-container ref="staff">
+      <center>
+        <h1 class="headers">Staff</h1>
+      </center>
+      
+        <div v-if="employees && employees.length">
+      <div v-for="(employee, index)  in employees" v-bind:key='"employee" + index' :employee='employee'>
+        <div class="staffContainer">
+          <b-container class="staffSection">
+            <b-row text-variant="white" class="employee">
+              
+              <b-col><h1 class="name">{{employee.name}}</h1>
+              <img class="photo" v-bind:src="employee.image" height="250px" width="250px"></b-col>
+
+              <b-col><h2 class="Title">{{employee.title}}</h2>
+              <h2 class="descBox">{{employee.desc}}</h2></b-col>
+              
+            </b-row>
+          </b-container>
+        </div>
+      </div>
+    </div>
+      </b-container>
+    <br>
     <br>
     <b-container class="linksPage" ref="links">
       <center>
@@ -616,7 +616,7 @@ html{
   color: white;
   margin-top: 60px;
   width: 100%;
- background: linear-gradient(#CFA580, white, #CFA580);
+ background: linear-gradient(#CFA580, rgb(93, 194, 113), rgb(81, 126, 204), #CFA580, rgb(93, 194, 113), rgb(81, 126, 204));
  /* background-color: #3E69B1; */
  
 }

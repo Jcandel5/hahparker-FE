@@ -425,12 +425,14 @@
       <b-row>
         <b-col class="contactPart">
           <h4><b>Email Us</b></h4>
-          <a href="mailto:hahparker.com">
+          <a href="mailto:hahparker@gmail.com" data-rel="external">
           <h4>HAHparker@gmail.com</h4>
           </a>
           <br>
           <h4><b>Contact Us</b></h4>
+          <a href="tel:7208708387" data-rel="external">
           <h4>720-870-8387</h4>
+          </a>
         </b-col>
       </b-row>
       <br>

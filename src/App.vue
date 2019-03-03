@@ -756,9 +756,11 @@ margin-top: 5px;
 }
 .heading{
   font-size: 58px;
-  color:white;
-  text-shadow: 1px 1px black;
-  width: 100%
+  color:#49A35B;
+  text-shadow: 1.5px 1.5px white;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.603);
+  border-radius: 30px;
 }
 .white--text{
   color: black;

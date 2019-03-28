@@ -50,8 +50,8 @@
                   indoor or outdoor cats.
 
                   Protecting against diseases like Leptospirosis, Distemper, Bordetella, Parvo virus, and Rabies is
-                  imperative in ensuring your dog has a healthy lifestyle and the owner is more confident when out with
-                  their pet(s). It is also recommended you keep your cat vaccinated from Feline Leukemia, Rabies,
+                  imperative in ensuring your dog has a healthy lifestyle and you can be more confident when you are with your pet(s). 
+                  It is also recommended you keep your cat vaccinated against Feline Leukemia, Rabies,
                   Feline Viral Rhinotracheitis (Feline Herpes Virus), and Feline Parvo.</p>
                 <b-button v-b-toggle.collapse1_inner size="sm">See More</b-button>
                 <b-collapse id=collapse1_inner class="mt-2">
@@ -59,7 +59,7 @@
                     please give us a call! 720-870-8387</b-card>
                 </b-collapse>
                 <h2>Wellness Exams</h2>
-                <p class="card-text">Regular examinations keep us on top of preexisting conditions and catching
+                <p class="card-text">Regular examinations keep us on top of pre-existing conditions and catching
                   possible issues before they become a serious problem. Our comprehensive exams give you a detailed
                   evaluation of your pet’s health. We provide you with the information you need to give your pet a
                   happy, healthy life.
@@ -77,10 +77,13 @@
                 <p class="card-text">Parasites are mostly viewed as a nuisance. Unfortunately they can carry deadly
                   diseases. We believe prevention is key to avoiding side effects or underlying symptoms.
 
-                  Thankfully, it is very easy to be proactive against most parasites, including Heartworm. Through use
-                  of an Heartworm Prevention products. Our preferred brands are listed below and typically consist of
-                  oral paste, pilsl, or chewables. Pesky fleas and ticks can also be avoided using a topical
-                  application. Being proactive is key to to avoiding the dangers of parasites.</p>
+                  Thankfully, it is very easy to be proactive against most parasites, including Heartworm. Through the
+                  use
+                  of monthly preventative products, most intestinal parasites that dogs can encounter on a daily basis
+                  can be eliminated, in addition to protecting them from heartworms.
+                  Our preferred brands are listed below and typically consist of
+                  a chewable pill, or tablet. Pesky fleas and ticks can also be avoided by using a monthly topical
+                  solution or a monthly chewable tablet. Being proactive is key to to avoiding the dangers of parasites.</p>
                 <b-button v-b-toggle.collapse3_inner size="sm">See More</b-button>
                 <b-collapse id=collapse3_inner class="mt-2">
                   <b-card>Contact us to get your pet on parasite prevention today! 720-870-8387
@@ -94,8 +97,6 @@
 
                   </b-card>
                 </b-collapse>
-
-
               </b-card>
             </b-collapse>
           </div>
@@ -172,7 +173,8 @@
                   At Heritage Animal Hospital, we prefer to be proactive in dental hygiene. Using thorough visual
                   examinations of the teeth and gums, we can quickly determine the overall health of your pet’s mouth.
                   We hope to catch periodontal disease early, before it becomes an issue. Although regular brushing at
-                  home can help keep tartar and gingivitis in check, sometimes a more extensive cleaning is necessary
+                  home can help keep tartar and gingivitis in check, sometimes a more extensive cleaning and oral
+                  radiographs are necessary
                   to ensure a healthy mouth and healthy life for your pet.</p>
 
                 <b-button v-b-toggle.collapse4_inner size="sm">See More</b-button></b-col>
@@ -199,7 +201,7 @@
                   clearest view of your pet’s organs and bones.</p>
                 <h2>Ultrasound</h2>
                 <p class="card-text">Our advances in human medicine have created technology that is beneficial for our
-                  pets. Like x-rays, Ultrasound’s are one advancement that allows us to further examine a pet’s
+                  pets. Like x-rays, Ultrasounds are one advancement that allows us to further examine a pet’s
                   condition to diagnose and determine the correct form of action for your pet.
 
                   Ultrasonography is a diagnostic method that uses ultrasound imaging to safely evaluate the organs of
@@ -210,14 +212,6 @@
                   In addition, we can also run more in-depth diagnostics such as CBC, Chemistry profiles, Electrolytes, Thyroid testing and Cortisol levels.
                   In most cases, we will have the results within 20 - 30 minutes.
                 </p>
-
-                <b-button v-b-toggle.collapse5_inner size="sm">See More</b-button>
-                <b-collapse id=collapse5_inner class="mt-2">
-                  <b-card>Whether routine procedures or medical treatments of chronically painful conditions, we are
-                    dedicated to providing safe and effective pain management. We also help you recognize signs of pain
-                    in your pet and help establish a pain management plan.</b-card>
-                </b-collapse>
-              </b-card>
             </b-collapse>
           </div>
         </b-col>
@@ -403,7 +397,7 @@
             <b-row text-variant="white" class="coupon">
               
               <b-col>
-                <b-button class="printButton" v-bind:href="coupon.image">Print
+                <b-button class="printButton" v-bind:href="coupon.image" target="_blank">Print
               <img class="photo" v-bind:src="coupon.image" height="250px" width="250px">
                 </b-button>
              </b-col>

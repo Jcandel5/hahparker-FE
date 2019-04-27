@@ -2,8 +2,8 @@
     <div class="headerContainer">
         <b-container class="header">
       <div class="col-md">
-        <h2>7076A Inspiration Drivez</h2>
-        <h2>Aurora, CO 80138</h2>
+        <h2>7076A Inspiration Drive</h2>
+        <h2>Parker, CO 80138</h2>
         <h2>720-870-8387</h2>
         <br>
         <p class="text">At Heritage Animal Hospital, we believe in gaining the trust of client and patient alike. We use the latest

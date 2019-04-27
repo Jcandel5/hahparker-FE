@@ -431,7 +431,7 @@
       </b-row>
       <br>
       <b-col>
-        <b-button href="https://goo.gl/maps/Z1rPTTPsEtYNHSfq8" target="_blank" class="locationButton">
+        <b-button href="https://goo.gl/maps/JT9FYyMPVmN2pfQT9" target="_blank" class="locationButton">
           <h4 class="locationText">7076A Inspiration Drive Parker, CO 80138</h4>
         </b-button>
       </b-col>
